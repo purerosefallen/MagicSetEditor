@@ -1,0 +1,19 @@
+version: '{build}'
+skip_tags: true
+
+install:
+
+configuration: Release
+
+build: 
+    project: DataEditorX.sln
+    parallel: true
+
+after_build:
+  - 7z a MSE.7z magicseteditor -xr!.git* -mx=9
+
+test: off
+
+artifacts:
+  - path: MSE.7z
+    name: MSE
