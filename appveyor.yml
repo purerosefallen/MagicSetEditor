@@ -6,7 +6,7 @@ install:
 configuration: Release
 
 build: 
-    project: data/mse.sln
+    project: src/mse.sln
     parallel: true
 
 after_build:
